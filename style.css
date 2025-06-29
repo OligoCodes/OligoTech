@@ -1,0 +1,602 @@
+:root{
+    --base-color: hsla(225, 64%, 4%, 1);
+    --base-variant: hsla(133, 0%, 100%, 1) ;
+    --base-pigment: darkgrey;
+    --base-option: #F6F6F6;
+    
+}
+
+.lightMode{
+    --base-color: hsla(232, 36%, 92%, 1);
+    --base-variant: hsla(225, 64%, 4%, 1);
+    --base-pigment: hsla(225, 30%, 0%, 1) ;
+    --base-option: #000000;
+}
+
+
+body{
+    background-color: var(--base-color);
+    margin-top: 110px;
+    
+}
+
+
+.abt{
+    font-weight: 800;
+}
+
+header{
+    display: flex;
+    background-image: url("portfolioImages/bg.png");
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-attachment: fixed;
+    border-bottom: solid 1px;
+    box-shadow: 0 2px 4px rgba(0, 198, 0, 0.9);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 4;
+}
+
+#welcome {
+    font-family: Montserrat ;
+   font-weight: 900;
+}
+
+#home{
+   margin-top: 100px;
+   text-align: center;
+   background-image: linear-gradient(to right,  hsla(99, 87%, 45%, 1), hsla(214, 100%, 55%, 1), hsla(281, 100%, 55%, 1));
+   background-clip: text;
+   color: transparent;
+}
+
+.fa-code{
+    color: hsla(220, 100%, 52%, 1);
+}
+
+#intro{
+    color: var(--base-variant);
+    font-family: Montserrat;
+    line-height: 2em;
+    font-weight: 600;
+}
+
+#logo{
+    border-radius: 35px;
+    border: solid 1px;
+    border-color: hsla(247, 80%, 53%, 1);
+    
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    
+}
+    
+@keyframes spin{
+    0%{
+        transform: rotateY(0deg);
+    }
+    33.33%{
+        transform: rotateY(-30deg);
+    }
+    66.67%{
+        transform: rotateY(60deg);
+    }
+    100%{
+        transform: rotateY(750deg);
+    }
+}
+
+ul{ 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 200px;
+    font-family: Montserrat;
+    font-weight: 700;
+    gap: 45px;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.list-item{
+    color: royalblue;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: hsla(46, 80%, 60%, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.list-item:hover{
+    color: hsla(117, 100%, 52%, 1);
+    border-color: hsla(295, 100%, 52%, 1);
+}
+
+.imgo{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 0;
+    
+}
+
+.Track{
+    font-weight: 500;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    border-radius: 25%;
+    box-shadow: 0 2px 4px rgba(129, 0, 198, 0.9) ;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    
+    
+}
+
+.img:hover{
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    scale: 1.2;
+}
+
+
+hr{
+    width: max-width;
+}
+
+.mediacons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    font-size: 25px;
+    color: var(--base-variant);
+   box-shadow: 0px 1px 5px rgba(30, 198, 0, 0.66);
+   border-radius: 35px;
+}
+
+.mediacons::visited{
+    color: var(--base-variant);
+}
+
+footer{
+    font-family: Montserrat;
+    color: var(--base-variant);
+    text-align: center;
+    font-weight: 500;
+}
+
+button{
+    height: 36px;
+    width: 150px;
+    font-family: Montserrat;
+    color: hsla(0, 88%, 38%, 1);
+    border: none;
+    border-radius: 30px;
+    background-image: radial-gradient(hsla(205, 100%, 50%, 1), hsla(133, 100%, 50%, 1));
+    font-weight: 700;
+    z-index: 200;
+    font-weight: 800;
+}
+
+#about{
+    text-align: center;
+    font-family: Montserrat;
+    background-image: linear-gradient(to left,  hsla(99, 87%, 45%, 1), hsla(214, 100%, 55%, 1), hsla(281, 100%, 55%, 1));
+   background-clip: text;
+   color: transparent;
+   line-height: 2em;
+   font-weight: 600;
+
+}
+
+.mainText {
+    color: var(--base-variant);
+    font-family: Montserrat;
+    word-spacing: 2px;
+    font-weight: 600;
+}
+
+.action{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+
+.faceCard {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Like giving it 3D glasses */
+}
+
+.faceCard-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.faceCard:hover .faceCard-in {
+  transform: rotateY(180deg); /* It flips on hover */
+}
+
+.faceCard-front, .faceCard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the "other side" when not shown */
+}
+
+.faceCard-front img, .faceCard-back img {
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  object-fit: cover;
+  
+}
+
+.faceCard-back {
+  transform: rotateY(180deg); /* The back is flipped to face the back */
+}
+
+#pros{
+    color: var(--base-variant);
+    font-family: Montserrat;
+    text-align: center;
+    font-family: Montserrat;
+    background-image: linear-gradient(to left,  hsla(99, 87%, 45%, 1), hsla(214, 100%, 55%, 1), hsla(281, 100%, 55%, 1));
+   background-clip: text;
+   color: transparent;
+   font-weight: 800;
+}
+
+#pros::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width : 50px;
+    background-color: var(--base-color);
+}
+
+#projects{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+
+.mega{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 50px;
+    padding-top: 60px;
+}
+
+.min{
+    height: auto;
+    width: 320px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 50, 360, 0.9);
+    border-radius: 20px;
+    color: var(--base-pigment);
+    
+}
+
+.min img{
+     width: 320px;
+    height: 270px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #F6F6F6;
+    
+}
+.min img:hover{
+    transition: all ease 1.3s;
+    scale: 1.0099;
+}
+
+.inbox{
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
+
+
+
+.min p, h3{
+    font-family: Montserrat;
+    margin-left: 5px;
+}
+
+.skills{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 0;
+    }
+
+.audit{
+    height: 100px;
+    width: 100px;
+    border-radius: 25%;
+    box-shadow: 0 2px 4px rgba(19, 206, 255, 1) ;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    
+}
+
+.audit:hover{
+    transition-property: all;
+    transition-timing-function: ease-out;
+    scale: 1.2;
+}
+
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.search{
+    position: relative;
+    display: inline-block;
+}
+
+.search input{
+    margin-left: 15px;
+    width: 330px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background: var(--base-option);
+}
+
+.lightMode .search input{
+   color: #DCDCDC;
+   background: hsla(225, 0%, 26%, 1);
+}
+
+.search input::placeholder{
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+input:focus, select:focus,  textarea:focus{
+    outline: solid 4px hsla(99, 87%, 45%, 1);
+    border: solid 3px hsla(214, 100%, 55%, 1);
+    border-top: solid 2px hsla(281, 100%, 55%, 1);
+}
+
+.fa-magnifying-glass{
+    text-align: center ;
+    transform: translateY(-50%);
+}
+
+.search #bar{
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    transform: translateY(-48%);
+    font-size: 16px;
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    border: none;
+    background: color;
+}
+
+.search #bar:hover{
+    transition: all ease 1.2s;
+    scale: 1.1;
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.lightMode #theme-switch svg:first-child{
+    display: none;
+}
+
+.lightMode #theme-switch svg:last-child{
+    display: block;
+    animation: spintro 1.2s ease 1;
+}
+
+@keyframes spintro{
+    0%{
+        transform: rotateZ(-120deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+/* pc */
+@media (min-width: 768px){
+    header{
+        height: 16vh;
+    }
+    header #logo{
+        scale: 3;
+        margin-left: 70px;
+    }
+    #theme-switch{
+        bottom: 1px;
+    }
+    body{
+        margin-top: 360px;
+    }
+   .mega{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+   }
+   .imgo, .skills{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+   .min{
+       height: 480px auto;
+       width: 420px;
+   }
+   .min img{
+     width: 420px;
+     height: 290px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   }
+   .Track, .house{
+       display: flex;
+       height: auto;
+       width: auto;
+   }
+   .Track .img, .house .audit{
+       height: 230px;
+       width: 230px;
+   }
+    #welcome{
+        font-size: 100px;
+    }
+    #head, h2{
+        font-size: 70px;
+    }
+    #intro,#main,#Text{
+       font-size: 50px;
+       font-weight: 700;
+    }
+    #main,#Text{
+        line-height: 100px;
+    }
+    #theme-switch{
+        scale: 3;
+        margin-right: 50px;
+        margin-top: 100px;
+    }
+    h3{
+        font-size: 55px;
+    }
+    .info{
+        font-size: 40px;
+    }
+    button{
+        scale: 1.5;
+        margin-left: 80px;
+        position: relative;
+        z-index: 0;
+    }
+    .faceCard{
+        scale: 2;
+        margin-top: 40px;
+    }
+    .inbox{
+        margin-left: 100px;
+        font-size: 22px;
+        height: 50px;
+        width: 200px;
+        z-index: 0;
+    }
+    #contact{
+        font-size: 50px;
+    }
+    #contact .mediacons{
+        font-size: 80px;
+        height: 100px;
+        gap: 80px;
+    }
+    nav{
+        display: flex;
+        margin-right: 50px;
+        justify-content: flex-end;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 150px;
+    }
+    .list{
+        scale: 2.5;
+    }
+    .search input{
+    margin-left: 100px;
+    width: 750px;
+    height: 120px;
+    border-radius: 100px;
+    border: none;
+    background: var(--base-option);
+    font-size: 48px;
+}
+   .search #bar{
+    position: absolute;
+    top: 50%;
+    right: 133px;
+    transform: translateY(-36.5%);
+    font-size: 16px;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    border: none;
+    background: color;
+}
+   .action{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .infer{
+       width: 400px;
+       height: 80px;
+       box-shadow: 0px 0px 10px rgba(0, 50, 360, 0.9) ;
+       font-size: 30px;
+       margin-top: 150px;
+       margin-right: 80px;
+   }
+   .fa-magnifying-glass {
+    font-size: 30px;
+    text-align: center;
+    transform: translateY(10%);
+}
+   input:focus, select:focus,  textarea:focus{
+    outline: solid 8px hsla(99, 87%, 45%, 1);
+    border: solid 6px hsla(214, 100%, 55%, 1);
+    border-top: solid 4px hsla(281, 100%, 55%, 1);
+}
+  .search input::placeholder {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 50px;
+}
+}
