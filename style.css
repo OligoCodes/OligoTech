@@ -28,7 +28,7 @@ body{
 header{
     display: flex;
     background-color: transparent;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(22px);
     position: fixed;
     left: 0px;
     right: 0px;
@@ -39,7 +39,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    z-index: 4;
+    z-index: 1000;
 }
 
 #welcome {
