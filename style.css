@@ -298,6 +298,8 @@ button{
     height: auto;
     width: 320px;
     border: none;
+    background:transparent;
+    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px rgba(0, 50, 360, 0.9);
     border-radius: 20px;
     color: var(--base-pigment);
