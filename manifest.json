@@ -7,12 +7,12 @@
   "background_color": "#ffffff",
   "icons": [
     {
-      "src": "portfolioImages/OligoTech_Logo.png",
+      "src": "portfolioImages/OligoTech_Logo_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "portfolioImages/OligoTech_Logo.png",
+      "src": "portfolioImages/OligoTech_Logo_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
