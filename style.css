@@ -3,7 +3,8 @@
     --base-variant: hsla(133, 0%, 100%, 1) ;
     --base-pigment: darkgrey;
     --base-option: #F6F6F6;
-    
+    --another: #000000;
+    --another1: linear-gradient(#1DFFFC, #FA52E6, #CCFA52)
 }
 
 .lightMode{
@@ -11,13 +12,18 @@
     --base-variant: hsla(225, 64%, 4%, 1);
     --base-pigment: hsla(225, 30%, 0%, 1) ;
     --base-option: #000000;
+    --another: hsla(232, 36%, 92%, 1);
+    --another1: linear-gradient(#01B7B5, #FF76D0, #A7E600)
 }
 
 
 body{
-    background-color: var(--base-color);
-    margin-top: 140px;
-    
+    display: flex;
+    flex-direction: column;
+    background-color: var(--another);
+    margin-top: 10px;
+    justify-content: center;
+    scroll-behavior: smooth;
 }
 
 
@@ -28,28 +34,37 @@ body{
 header{
     display: flex;
     background-color: transparent;
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(35.5px);
     position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;
     background-attachment: fixed;
     border-bottom: solid 1px;
-    box-shadow: 0px 0px 10px rgba(0, 198, 0, 0.7);
-    justify-content: space-between;
+    box-shadow: 0px 0px 2px rgba(0, 0, 320, 1);
+    justify-content: center;
     align-items: center;
-    height: 100px;
     width: 100%;
+    height: 100px;
     z-index: 1000;
 }
 
 #welcome {
     font-family: Montserrat ;
    font-weight: 900;
+   font-size: 24px;
+}
+
+#head{
+    font-family: Fira Code;
+    color: #000000;
+    font-weight: 900;
+    text-align: center;
+    font-size: 20px;
 }
 
 #home{
-   margin-top: 100px;
+   margin-top: 50px;
    text-align: center;
    background-image: linear-gradient(to right,  hsla(99, 87%, 45%, 1), hsla(214, 100%, 55%, 1), hsla(281, 100%, 55%, 1));
    background-clip: text;
@@ -71,7 +86,8 @@ header{
     border-radius: 35px;
     border: solid 1px;
     border-color: hsla(247, 80%, 53%, 1);
-    
+    position: fixed;
+    left: 2px;
     animation-name: spin;
     animation-duration: 3s;
     animation-delay: 1s;
@@ -95,31 +111,51 @@ header{
     }
 }
 
+nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    box-shadow : 0px 2px rgba(0, 0, 320, 1);
+    border-radius: 15px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 80px;
+    background: var(--another1);
+}
+
 ul{ 
     position: relative;
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin-right: 200px;
+    padding-right: 10px;
     font-family: Montserrat;
     font-weight: 700;
     gap: 45px;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: end;
     z-index: 3;
 }
+
+
 
 .list-item{
     color: royalblue;
     text-decoration: none;
     box-sizing: border-box;
-    background-color: hsla(46, 80%, 60%, 0.8);
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .list-item:hover{
-    color: hsla(117, 100%, 52%, 1);
+    color: hsla(178, 100%, 52%, 1);
     border-color: hsla(295, 100%, 52%, 1);
+}
+
+#main{
+    padding-top: 0px;
 }
 
 .imgo{
@@ -179,16 +215,23 @@ footer{
 }
 
 button{
-    height: 36px;
-    width: 150px;
+    height: 45px;
+    width: auto;
     font-family: Montserrat;
     color: hsla(0, 88%, 38%, 1);
     border: none;
     border-radius: 30px;
     background-image: radial-gradient(hsla(205, 100%, 50%, 1), hsla(133, 100%, 50%, 1));
-    font-weight: 700;
+    font-size: 17px;
     z-index: 200;
-    font-weight: 800;
+    font-weight: 750;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+    transition: all 0.5s ease;
+    scale: 1.1;
+    
 }
 
 #about{
@@ -299,8 +342,6 @@ button{
     height: auto;
     width: 320px;
     border: none;
-    background:transparent;
-    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px rgba(0, 50, 360, 0.9);
     border-radius: 20px;
     color: var(--base-pigment);
@@ -365,7 +406,7 @@ button{
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 70px;
+    top: 30px;
     right: 20px;
     z-index: 1000;
 }
@@ -444,5 +485,3 @@ input:focus, select:focus,  textarea:focus{
         transform: rotateZ(0deg);
     }
 }
-
-/* pc */
