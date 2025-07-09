@@ -88,26 +88,12 @@ header{
     border-color: hsla(247, 80%, 53%, 1);
     position: fixed;
     left: 2px;
-    animation-name: spin;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    
+    animation-name: spin 10s infinite 1s ease;  
 }
     
 @keyframes spin{
     0%{
-        transform: rotateZ(0deg);
-    }
-    33.33%{
-        transform: rotateZ(-30deg);
-    }
-    66.67%{
-        transform: rotateZ(60deg);
-    }
-    100%{
-        transform: rotateZ(750deg);
+        transform: rotateZ(360deg);
     }
 }
 
@@ -358,7 +344,7 @@ button:hover{
 }
 .min img:hover{
     transition: all ease 1.4s;
-    transform: scale(1.09);
+    transform: scale(1.3);
 }
 
 .inbox{
