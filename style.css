@@ -140,6 +140,7 @@
         .welcome-heading {
             font-size: 3.5rem;
             font-weight: 700;
+            font-family: Montserrat;
             margin-bottom: 1rem;
             background: var(--gradient);
             -webkit-background-clip: text;
