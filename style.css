@@ -215,6 +215,7 @@
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
+            font-family: Montserrat;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -336,6 +337,7 @@
             border-radius: 50px;
             font-size: 1rem;
             font-weight: 600;
+            font-family: Montserrat;
             cursor: pointer;
             transition: all 0.3s ease;
             display: block;
@@ -432,6 +434,7 @@
             border: none;
             border-radius: 25px;
             font-weight: 500;
+            font-family: Montserrat;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
