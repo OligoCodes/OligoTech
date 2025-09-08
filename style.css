@@ -229,6 +229,7 @@
 
         /* About Section */
         .about-section {
+            width: 100%;
             background: var(--secondary-bg);
             border-radius: 20px;
             margin: 2rem 0;
