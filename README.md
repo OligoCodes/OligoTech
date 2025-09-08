@@ -1,12 +1,12 @@
-## 🎨 My Porfolio Website 
+# 🎨 My Porfolio Website 
 
-# OligoTech
+## OligoTech
 
 <p align="center">
-  <img src="https://github.com/OligoCodes/OligoTech/portfolioImages/OligoTech_Logo.png" alt="Profile Banner" width="600" style="border-radius: 25px;"/>
+  <img src="./portfolioImages/OligoTech_Logo.png" alt="Profile Banner" width="600" style="border-radius: 25px;"/>
 </p>
 
-# 🌍 Connect With Me  
+## 🌍 Connect With Me  
 
 <p align="center">
   <a href="mailto:josephoseibonsu742@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
